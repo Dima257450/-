@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Основные народы Татарстана</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(30deg, #bddab1, #aad3df, #f1efe8, #aad3df, #bddab1);
+            width: 100%;
+            background-size: cover;
+            opacity: 0.8;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .square {
+            width: 250px;
+            height: 250px;
+            background: #fff;
+            margin: 20px;
+            transition: all 0.5s ease-in-out;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .square:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            padding: 5px 10px;
+            background: #000;
+            color: #accdf5;
+            font-size: 20px;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .square:hover .caption {
+            opacity: 1;
+        }
+
+        .Main_page {
+            width: 100px;
+            height: 40px;
+            background: #fff;
+            margin: 20px;
+            position: absolute;
+            left: 20px;
+            color: #000;
+            border: 2px solid black;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Main_page:hover {
+            background: #000;
+            color: #accdf5;
+            transform: scale(1.1);
+        }
+
+        /* Стили для тёмной темы */
+
+        .dark-theme {
+            background: linear-gradient(30deg, #222, #333, #444, #333, #222);
+            opacity: 0.8;
+            color: #fff;
+        }
+
+        /* Стили для мобильных устройств */
+        @media (max-width: 425px) {
+            .square {
+                width: 200px;
+                height: 200px;
+                margin: 10px;
+            }
+
+            .Main_page {
+                width: 80px;
+                height: 30px;
+                margin: 10px;
+                font-size: 16px;
+            }
+        }
+
+        /* Стили для планшетов */
+        @media (min-width: 426px) and (max-width: 767px) {
+            .square {
+                width: 220px;
+                height: 220px;
+                margin: 15px;
+            }
+
+            .Main_page {
+                width: 90px;
+                height: 35px;
+                margin: 15px;
+                font-size: 18px;
+            }
+        }
+
+        /* Стили для ноутбуков */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .square {
+                width: 250px;
+                height: 250px;
+                margin: 20px;
+            }
+
+            .Main_page {
+                width: 100px;
+                height: 40px;
+                margin: 20px;
+                font-size: 20px;
+            }
+        }
+
+        /* Стили для больших ноутбуков */
+        @media (min-width: 1024px) and (max-width: 1439px) {
+            .square {
+                width: 300px;
+                height: 300px;
+                margin: 25px;
+            }
+
+            .Main_page {
+                width: 120px;
+                height: 45px;
+                margin: 25px;
+                font-size: 22px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <a href="../indexs/index.html">
+        <div class="Main_page">Главная</div>
+    </a>
+    <div class="container">
+        <div class="square">
+            <a href="../Pages/Tat.html"><img class="image" src="../images/Tat.jpg" alt=""></a>
+            <div class="caption">Татары</div>
+        </div>
+        <div class="square">
+            <a href="../Pages/Ru.html"><img class="image" src="../images/Rus.jpg" alt=""></a>
+            <div class="caption">Русские</div>
+        </div>
+        <div class="square">
+            <a href="../Pages/Chu.html"><img class="image" src="../images/Chuv.jpg" alt=""></a>
+            <div class="caption">Чуваши</div>
+        </div>
+        <div class="square">
+            <a href="../Pages/Udm.html"><img class="image" src="../images/Udmurt.jpg" alt=""></a>
+            <div class="caption">Удмурты</div>
+        </div>
+    </div>
+    <script src="../Theme.js"> </script>
+</body>
+
+</html>

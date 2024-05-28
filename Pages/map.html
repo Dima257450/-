@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Карта Татарстана</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v6.14.1/css/ol.css" type="text/css">
+    <script src="https://openlayers.org/en/v6.14.1/build/ol.js"></script>
+    <style>
+        body {
+            background: linear-gradient(30deg, #bddab1, #aad3df, #f1efe8, #aad3df, #bddab1);
+            width: 100%;
+            background-size: cover;
+            opacity: 0.8;
+        }
+
+        .map {
+            top: 60px;
+            height: 91vh;
+            width: 100%;
+            position: absolute;
+        }
+
+        .Main_page {
+            top: -10px;
+            width: 100px;
+            height: 40px;
+            background: #fff;
+            margin: 20px;
+            position: absolute;
+            left: 20px;
+            color: #000;
+            border: 2px solid black;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Main_page:hover {
+            background: #000;
+            color: #accdf5;
+            transform: scale(1.1);
+        }
+
+        /* Стили для тёмной темы */
+
+        .dark-theme {
+            background: linear-gradient(30deg, #222, #333, #444, #333, #222);
+            opacity: 0.8;
+            color: #fff;
+        }
+
+        /* Стили для мобильных устройств */
+        @media (max-width: 425px) {
+            .Main_page {
+                top: -5px;
+                width: 80px;
+                height: 30px;
+                margin: 10px;
+                font-size: 16px;
+            }
+        }
+
+        /* Стили для планшетов */
+        @media (min-width: 426px) and (max-width: 767px) {
+            .Main_page {
+                top: -7px;
+                width: 90px;
+                height: 35px;
+                margin: 15px;
+                font-size: 18px;
+            }
+        }
+
+        /* Стили для ноутбуков */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .Main_page {
+                top: -10px;
+                width: 100px;
+                height: 40px;
+                margin: 20px;
+                font-size: 20px;
+            }
+        }
+
+        /* Стили для больших ноутбуков */
+        @media (min-width: 1024px) and (max-width: 1439px) {
+            .Main_page {
+                top: -12px;
+                width: 120px;
+                height: 45px;
+                margin: 25px;
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../indexs/index.html">
+        <div class="Main_page">Главная</div>
+    </a>
+    <div id="map" class="map"></div>
+    <script src="../map.js"></script>
+    <script src="../Theme.js"> </script>
+</body>
+
+</html>

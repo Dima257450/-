@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../burger.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700&display=swap">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="burger-menu">
+                <div id="burger" onclick="toggleMenu()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div id="menu" class="menu">
+                    <p><b> <a href="../indexs/index.html">Главная страница</a></b></p>
+                    <p><b> <a href="../indexs/about.html">О проекте</a></b></p>
+                    <p><b> <a href="../indexs/func.html">Функционал</a></b></p>
+                    <div class="theme-switch">
+                        <button>Переключить тему</button>
+                    </div>
+                    <div class="lang-buttons">
+                        <button id="ru" onclick="changeLanguage('ru')">RU</button>
+                        <button id="tt" onclick="changeLanguage('tt')">TT</button>
+                    </div>
+                    <div class="Chat">
+                        <button onclick="intrigueChatbot()">Пообщаться с чат-ботом</button>
+                    </div>
+                </div>
+            </div>
+
+        <h1 laung="A" class="Heading">Добро пожаловать на сайт о культуре и традициях Татарстана</h1>
+        </div>
+    </header>
+    <main class="container">
+        <hr>
+        <h2 laung="section">Основные разделы</h2>
+        <ul>
+            <li> <a href="../Pages/map.html" laung="sec1"><b>Карта</b></a></li>
+            <li> <a href="../indexs2/Search.html" laung="sec2"><b>История</b></a></li>
+            <li> <a href="../indexs2/Search.html" laung="sec3"><b>Обычаи</b></a></li>
+            <li> <a href="../indexs2/Search.html" laung="sec4"><b>Кухня</b></a></li>
+        </ul>
+        <hr>
+        <h1 laung ="about">О сайте</h1>
+        <h2 laung="Abc"><b>Название проекта:</h2>
+        </p>
+        <ul>
+            <li laung="name">Культура и традиции народов Татарстана</li>
+        </ul>
+        <h2 laung="goal"><b>Цель:</b></h2>
+        <ul>
+            <li laung="goal1">Познакомить людей с богатой культурой и историей народов Татарстана</li>
+        </ul>
+        <h2 laung="task"><b>Задачи:</b></h2>
+        <ul>
+            <li laung="task1">Изучение традиций и обычаев</li>
+            <li laung="task2">Публикация материалов о культурных событиях</li>
+            <li laung="task3">Привлечение внимания к истории региона</li>
+        </ul>
+        <hr>
+    </main>
+    <script src="../burger.js"> </script>
+    <script src="../Chat.js"> </script>
+    <script src="../Theme.js"> </script>
+    <script>
+        function changeLanguage(lang) {
+            let elements = document.querySelectorAll('[laung]');
+
+            for (let i = 0; i < elements.length; i++) {
+                const element = elements[i];
+                const key = element.getAttribute('laung');
+                element.innerHTML = translations[lang][key];
+            }
+        }
+
+        const translations = {
+            ru: {
+                "section":"Основные разделы",
+                "sec1":"Карта",
+                "sec2":"История",
+                "sec3":"Обычаи",
+                "sec4":"Кухня",
+                "A": "Добро пожаловать на сайт о культуре и традициях Татарстана",
+                "about": "О сайте",
+                "Abc": "Название проекта:",
+                "name": "Культура и традиции народов Татарстана",
+                "goal": "Цель:",
+                "goal1": "Познакомить людей с богатой культурой и историей народов Татарстана",
+                "task": "Задачи:",
+                "task1": "Изучение традиций и обычаев",
+                "task2": "Публикация материалов о культурных событиях",
+                "task3": "Привлечение внимания к истории региона"
+            },
+            tt: {
+                "section":"Төп бүлекләр",
+                "sec1":"Карта",
+                "sec2":"Тарих",
+                "sec3":"Гадәт",
+                "sec4":"Аш-Суы",
+                "A": "Татарстан мәдәнияте һәм гореф гадәтләре турында сайтка рәхим итеге",
+                "about": "Сайт турында",
+                "Abc": "Проектның исеме:",
+                "name": "Татарстан халыкларының мәдәнияте һәм традицияләре",
+                "goal": "Максат:",
+                "goal1": "Кешеләрне Татарстан халыкларының бай мәдәнияте һәм тарихы белән таныштыру",
+                "task": "Бурыч:",
+                "task1": "Гадәтләрне һәм йолаларны өйрәнү",
+                "task2": "Мәдәни чаралар турында материаллар бастыру",
+                "task3": "Регион тарихына игътибарны җәлеп итү"
+            }
+        };
+
+        changeLanguage('ru');
+    </script>
+</body>
+
+</html>

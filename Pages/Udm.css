@@ -1,0 +1,365 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(30deg, #bddab1, #aad3df, #f1efe8, #aad3df, #bddab1);
+    width: 100%;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    color: #222;
+}
+
+h1,
+h2 {
+    font-family: 'Noto Serif', serif;
+}
+
+p {
+    color: #666;
+}
+
+ul {
+    list-style-type: disc;
+    color: #333;
+    padding-left: 20px;
+}
+
+a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #c4b9b9;
+    margin: 20px 0;
+}
+
+
+header {
+
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+
+/* Знаменитые удмурты */
+.square {
+    width: 250px;
+    height: 250px;
+    background: #fff;
+    margin: 20px;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.square:hover {
+    transform: scale(1.2);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 5px 10px;
+    background: #000;
+    color: #accdf5;
+    font-size: 20px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.square:hover .caption {
+    opacity: 1;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+/* Стили для тёмной темы */
+
+.dark-theme {
+    background: linear-gradient(30deg, #222, #333, #444, #333, #222);
+    opacity: 0.8;
+    color: #fff;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme p {
+    color: #f4f4f4; 
+}
+body.dark-theme ul{
+    color: #f5e3ad;
+}
+body.dark-theme p {
+    color: #f5e3ad;
+}
+.theme-switch {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+}
+
+.theme-switch button {
+    padding: 5px 10px;
+    background-color: #f1efe8;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.theme-switch button:hover {
+    background-color: #aad3df;
+}
+
+.theme-switch button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Кнопка назад */
+
+.page {
+    width: 100px;
+    height: 40px;
+    background: #fff;
+    margin: 10px;
+    position: absolute;
+    margin-left: 75vh;
+    color: #000;
+    border: 2px solid black;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page:hover {
+    background: #000;
+    color: #accdf5;
+    transform: scale(1.1);
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 425px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    ul {
+        padding-left: 10px;
+    }
+
+    a {
+        font-size: 18px;
+    }
+
+    .square {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+    }
+
+    .caption {
+        font-size: 16px;
+    }
+    .page {
+        width: 80px;
+        height: 30px;
+        margin: 10px;
+        font-size: 16px;
+        margin-left: 42vh;
+    }
+}
+
+/* Стили для планшетов */
+@media (min-width: 426px) and (max-width: 767px) {
+    .container {
+        max-width: 720px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    ul {
+        padding-left: 15px;
+    }
+
+    a {
+        font-size: 20px;
+    }
+
+    .square {
+        width: 220px;
+        height: 220px;
+        margin: 15px;
+    }
+
+    .caption {
+        font-size: 18px;
+    }
+    .page {
+        width: 80px;
+        height: 30px;
+        margin: 10px;
+        font-size: 16px;
+        margin-left: 40vh;
+    }
+}
+
+/* Стили для ноутбуков */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 960px;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    a {
+        font-size: 22px;
+    }
+
+    .square {
+        width: 250px;
+        height: 250px;
+        margin: 20px;
+    }
+
+    .caption {
+        font-size: 20px;
+    }
+    .page {
+        width: 100px;
+        height: 40px;
+        margin: 20px;
+        font-size: 20px;
+        margin-left: 80vh;
+    }
+}
+
+/* Стили для больших ноутбуков */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .container {
+        max-width: 1200px;
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 22px;
+    }
+
+    ul {
+        padding-left: 25px;
+    }
+
+    a {
+        font-size: 24px;
+    }
+
+    .square {
+        width: 300px;
+        height: 300px;
+        margin: 25px;
+    }
+
+    .caption {
+        font-size: 22px;
+    }
+    .page {
+        width: 120px;
+        height: 45px;
+        margin: 25px;
+        font-size: 22px;
+        margin-left: 107vh;
+    }
+}
+

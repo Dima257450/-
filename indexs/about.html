@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О проекте</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../burger.css">
+</head>
+
+<body class="container">
+    <header>
+        <div class="burger-menu">
+            <div id="burger" onclick="toggleMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div id="menu" class="menu">
+                <p><b> <a href="../indexs/index.html">Главная страница</a></b></p>
+                <p><b> <a href="../indexs/about.html">О проекте</a></b></p>
+                <p><b> <a href="../indexs/func.html">Функционал</a></b></p>
+                <div class="theme-switch">
+                    <button>Переключить тему</button>
+                </div>
+                <div class="lang-buttons">
+                    <button id="ru" onclick="changeLanguage('ru')">RU</button>
+                    <button id="tt" onclick="changeLanguage('tt')">TT</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <h1 laung="name">О проекте "Культура и традиции народов Татарстана"</h1>
+    <hr>
+    <h2 laung="op">Моя миссия</h2>
+    <ul>
+        <p><b laung="sec0">Я стремлюсь сохранить и передать богатое наследие культуры и традиций народов Татарстана следующим
+            поколениям.</b>
+        </p>    
+    </ul>
+    <h2>Мои ценности</h2>
+    <ul>
+        <li><b laung="sec1">Уважение к истории и культуре</b></li>
+        <li><b laung="sec2">Содействие в сохранении национальных обычаев</b></li>
+        <li><b laung="sec3">Пропаганда культурного разнообразия</b></li>
+    </ul>
+    <script src="../burger.js"></script>
+    <script src="../Theme.js"> </script>
+    <script>
+        function changeLanguage(lang) {
+            let elements = document.querySelectorAll('[laung]');
+
+            for (let i = 0; i < elements.length; i++) {
+                const element = elements[i];
+                const key = element.getAttribute('laung');
+                element.innerHTML = translations[lang][key];
+            }
+        }
+
+        const translations = {
+            ru: {
+                "name": "О проекте «Культура и традиции народов Татарстана» ",
+                "op":"Моя миссия",
+                "sec0":"Я стремлюсь сохранить и передать богатое наследие культуры и традиций народов Татарстана следующим поколениям.",
+                "sec1":"Уважение к истории и культуре",
+                "sec2":"Содействие в сохранении национальных обычаев",
+                "sec3":"Пропаганда культурного разнообразия",
+            },
+            tt: {
+                "name": "«Татарстан халыклары мәдәнияте һәм традицияләре» проекты турында",
+                "op":"Минем миссиям",
+                "sec0":"Мин Татарстан халыкларының мәдәнияте һәм гореф-гадәтләренең бай мирасын киләсе буыннарга сакларга һәм тапшырырга омтылам.",
+                "sec1":"Тарихка һәм мәдәнияткә хөрмәт",
+                "sec2":"Милли гореф гадәтләрне саклауда ярдәм итү",
+                "sec3":"Мәдәни төрлелекне пропагандалау",
+            }
+        };
+
+        changeLanguage('ru');
+    </script>
+</body>
+
+</html>

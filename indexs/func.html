@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функционал</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../burger.css">
+</head>
+
+<body class="container"> 
+    <header>
+        <div class="burger-menu">
+            <div id="burger" onclick="toggleMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div id="menu" class="menu">
+                <p><b> <a href="../indexs/index.html">Главная страница</a></b></p>
+                <p><b> <a href="../indexs/about.html">О проекте</a></b></p>
+                <p><b> <a href="../indexs/func.html">Функционал</a></b></p>
+                <div class="theme-switch">
+                    <button>Переключить тему</button>
+                </div>  
+                <div class="lang-buttons">
+                    <button id="ru" onclick="changeLanguage('ru')">RU</button>
+                    <button id="tt" onclick="changeLanguage('tt')">TT</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <h1 laung="name">Функционал проекта</h1>
+    <hr>
+    <h2 laung="op">Возможности</h2>
+    <p><b laung="sec1">1. Википедия народов Татарстана.</b></p>
+    <p><b laung="sec2">2. Карта Татарстана с указанием культурных объектов.</b></p>
+    <p><b laung="sec3">3. Многоязычность.</b></p>
+    <p><b laung="sec4">4. Тёмная и светлая тема сайта.</b></p>
+    <p><b laung="sec5">5. Чат бот.</b></p>
+
+    <script src="../burger.js"></script>
+    <script src="../Theme.js"> </script>
+    <script>
+        function changeLanguage(lang) {
+            let elements = document.querySelectorAll('[laung]');
+
+            for (let i = 0; i < elements.length; i++) {
+                const element = elements[i];
+                const key = element.getAttribute('laung');
+                element.innerHTML = translations[lang][key];
+            }
+        }
+
+        const translations = {
+            ru: {
+                "name": "Функционал проекта",
+                "op":"Возможности",
+                "sec1":"1. Википедия народов Татарстана.",
+                "sec2":"2. Карта Татарстана с указанием культурных объектов.",
+                "sec3":"3. Многоязычность.",
+                "sec4":"4. Тёмная и светлая тема сайта.",
+                "sec5":"5. Чат бот."
+            },
+            tt: {
+                "name": "Проектның функционалы",
+                "op":"Мөмкинлек",
+                "sec1":"1. Татарстан халыклары Википедиясе.",
+                "sec2":"2. Мәдәни объектлар күрсәтелгән татарстан картасы.",
+                "sec3":"3. Күптеллелек",
+                "sec4":"4. Сайтның караңгы һәм якты темасы.",
+                "sec5":"5. Чат бот."
+            }
+        };
+
+        changeLanguage('ru');
+    </script>
+</body>
+
+</html>
